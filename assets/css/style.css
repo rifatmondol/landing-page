@@ -1,0 +1,739 @@
+/*
+====================================
+Theme name: PerthshireL anding page;
+Description: This is a landing page build with html,css,js,bootstrao 5;
+Author name : Md. Rifat Mondol;
+Theme version: 1.0;
+
+Theme design part:
+
+1. Header section 
+2. Banner section 
+3. Explainer video section
+4. Blog section
+5. Our team section
+6. What we do section
+7. About us section
+8. Mail section
+9. Footer section
+====================================
+*/
+
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body {
+    background: #f0f5fc;
+}
+a{
+	text-decoration: none;
+}
+h2{
+	color: rgb(144,36,37);
+	position: relative;
+	display: inline-block;
+	left: 50%;
+	transform: translateX(-50%);
+}
+h2:after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: rgb(144,36,37);
+}
+h3{
+	color: rgb(42,76,119);
+}
+h4,h6{
+	text-align: center;
+}
+
+
+
+/*
+===========================
+scroll to top 
+===========================
+*/
+.scrollToTop {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    color: #ffffff;
+    z-index: 999;
+    bottom: 30px;
+    right: 30px;
+    position: fixed;
+    border-radius: 5px;
+    -webkit-transform: translateY(150px);
+    -ms-transform: translateY(150px);
+    transform: translateY(150px);
+    background: #05c3de;
+    text-align: center;
+    font-size: 16px;
+}
+.scrollToTop.active {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    animation: bounceInDown 2s;
+    -webkit-animation: bounceInDown 2s;
+    -moz-animation: bounceInDown 2s;
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px)
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px)
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px)
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown
+}
+
+/*
+==================================
+Scroll to top css end
+===================================
+*/
+
+
+
+/*
+==================================
+header css start
+===================================
+*/
+header#header-section {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+.header-top {
+    padding: 10px 0px;
+    transition: 0.6s;
+}
+.header-section.sticky .header-bottom{
+	display: none;
+}
+.header-section.sticky .header-top{
+	background: rgb(42,76,119);
+	padding: 0;
+}
+.header-section.sticky .header-top ul li a{
+	color: #fff;
+}
+.header-section.sticky .logo-section {
+    background: #fff;
+    opacity: 0.3;
+}
+.logo-section img,.blog-item img{
+	width: 100%;
+}
+.menu-section,.header-bottom{
+	transition: 0.5s;
+}
+.header-bottom{
+	background: rgb(42,76,119);
+    padding: 10px 0px;
+}
+.menu-section{
+	text-align: right;
+}
+.menu-section ul {
+    display: inline-flex;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    margin-top: 12px;
+}
+.menu-section ul li,.header-bottom ul li{
+    display: inline;
+    position: relative;
+}
+.menu-section ul li a, .header-bottom ul li a {
+    padding: 10px;
+    display: block;
+    color: rgb(42,76,119);
+    font-size: 17px;
+}
+.header-bottom ul li a {
+    padding: 0px 10px;
+    color: #fff;
+}
+.header-bottom ul{
+	display: inline-flex;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+.menu-section ul li:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    transition: 0.5s;
+    background: rgb(42, 76, 119);
+    left: 0;
+    height: 0;
+}
+.menu-section ul li:hover:after {
+    width: 100%;
+    height: 3px;
+}
+/*
+==================================
+header css end
+===================================
+*/
+
+
+/*
+==================================
+banner css start
+===================================
+*/
+.item-1{
+	background: url('../img/banner.jpeg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 590px;
+}
+.item-2{
+	background: url('../img/banner-2.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 590px;
+}
+.item-3{
+	background: url('../img/banner-4.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 590px;
+}
+.item-4{
+	background: url('../img/banner-3.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 590px;
+}
+.banner-item {
+    position: relative;
+}
+.banner-item:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: #000;
+    opacity: 0.5;
+    height: 100%;
+}
+.banner-item h1,.banner-item p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    z-index: 1;
+}
+.banner-item h1 {
+    top: 35%;
+    font-size: 40px;
+}
+.banner-item p {
+    top: 45%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+.owl-nav span {
+    font-size: 60px;
+    color: #fff;
+}
+.owl-nav button:focus {
+    outline: none;
+}
+button.owl-prev{
+	left: 10px;
+	position: absolute;
+}
+button.owl-next{
+	right: 10px;
+	position: absolute;
+}
+.owl-dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.owl-dot {
+    margin: 0px 5px;
+}
+.owl-dot span{
+	width: 10px;
+    height: 10px;
+    background: #fff;
+    display: inline-block;
+    border-radius: 50%;
+}
+.owl-dot.active span{
+	background: #2a4c77;
+}
+button:focus{
+	outline: none;
+}
+#banner-section a {
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    background: rgb(42,76,119);
+    padding: 10px;
+    width: 125px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+#banner-section a:hover {
+    box-shadow: 1px 6px 5px 0px #676363;
+}
+/*
+==================================
+banner css end
+===================================
+*/
+
+
+
+/*
+==================================
+video css start
+===================================
+*/
+section#video-section {
+    margin: 55px 0px;
+}
+section#video-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#video-section iframe{
+	width: 560px;
+	height: 315px;
+	border: none;
+}
+/*
+==================================
+video css end
+===================================
+*/
+
+
+
+/*
+===================================
+Blog css start
+===================================
+*/
+#blog-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section#blog-section {
+    margin: 80px 0px;
+    margin-bottom: 50px;
+}
+.blog-left {
+    background: rgb(42,76,119);
+    padding: 20px 15px;
+    color: #fff;
+    position: sticky;
+    top: 70px;
+}
+.blog-item ul {
+	padding: 0;
+	margin: 0;
+}
+.blog-item ul li a {
+    color: #fff;
+    display: inline-block;
+    padding: 10px 0px;
+}
+.blog-item ul li span {
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    height: 25px;
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+    line-height: 25px;
+    float: right;
+    color: rgb(144,36,37);
+    font-weight: 700;
+    font-size: 14px;
+}
+.blog-right {
+    background: #fff;
+    padding: 15px;
+}
+.blog-right .blog-item {
+    padding-bottom: 15px;
+    border-bottom: 2px dashed #ddd;
+    margin-bottom: 15px;
+}
+span.date {
+    font-size: 14px;
+    font-family: monospace;
+}
+span.cmnt {
+    color: #6b6a69;
+    font-size: 13px;
+    margin-left: 10px;
+}
+span.read {
+    display: inline-block;
+    background: rgb(42,76,119);
+    color: #fff;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    float: right;
+    transition: 0.3s;
+}
+span.read:hover {
+    cursor: pointer;
+    box-shadow: 1px 6px 5px 0px #676363;
+    transform: rotate(-2deg);
+}
+/*
+==================================
+Blog css end
+==================================
+*/
+
+
+
+/*
+============================
+Team css start
+============================
+*/
+section#team-section {
+    background: rgb(42,76,119);
+    position: relative;
+    padding-bottom: 20px;
+}
+section#team-section h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #fff;
+}
+section#team-section h2:after{
+	background: #fff;
+}
+#team-section img.shape {
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    left: 0px;
+}
+.team-member img {
+    width: 200px;
+    border-radius: 10%;
+    height: 215px;
+    transition: 0.3s;
+}
+.team-member:hover img{
+    border-radius: 50%;
+}
+.team-member {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.team-member:hover {
+    background: #f0f5fc;
+    transition: 0.3s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 18px 0px #171615;
+    border-radius: 5px;
+}
+.team-member:hover h4,.team-member:hover p{
+    color: #000;
+}
+
+.team-member:hover span{
+    background: #000;
+}
+.team-member span:nth-child(1n):hover{
+     background: #00ACEE!important;
+}
+.team-member span:nth-child(2n):hover{
+     background: #3B5998!important;
+}
+.team-member span:nth-child(3n):hover{
+     background: #0E76A8!important;
+}
+.team-member:hover span i{
+    color: #fff;
+}
+.team-member h4 {
+    margin: 15px 0px;
+    color: #fff;
+}
+.team-member p {
+    color: #fff;
+    font-family: cursive;
+}
+i.fab.fa-twitter,i.fab.fa-facebook-f,i.fab.fa-linkedin-in {
+    
+}
+.team-member span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #ddd;
+    border-radius: 50%;
+}
+/*
+==============================
+Team css end
+===============================
+*/
+
+
+
+/*
+================================
+We do section
+================================
+*/
+section#we-do-section {
+    margin-bottom: 60px;
+}
+section#we-do-section h2 {
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+#we-do-section h4,#we-do-section p {
+    color: #000;
+    position: relative;
+    text-align: center;
+}
+.do-item {
+    background: rgb(42,76,119);
+    padding: 20px 25px;
+    height: 200px;
+}
+.do-item h4, .do-item p {
+    color: #fff!important;
+}
+/*
+===================================
+We do section end
+===================================
+*/
+
+
+
+/*
+==================================
+About css start
+==================================
+*/
+#about-us-section h3 {
+    text-align: center;
+    margin-top: 25px;
+}
+#about-us-section p {
+    background: #fff;
+    padding: 25px 35px;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+#about-us-section img {
+    width: 100%;
+}
+
+/*
+===================================
+About css end
+===================================
+*/
+
+
+
+/*
+======================================
+Mailing service css start
+=======================================
+*/
+section#mailing-section {
+    padding: 50px 0px;
+}
+
+#mailing-section h2 {
+    margin-bottom: 40px;
+}
+input#name-1,input#email {
+    width: 70%;
+}
+input:focus,button:focus,textarea:focus{
+	outline: none;
+	text-indent: 5px;
+}
+input#name{
+	width: 35%
+}
+input#name-2{
+	width: 34%
+}
+
+textarea{
+	resize: none;
+	width: 70%;
+}
+button.btn {
+    background: rgb(42,76,119);
+    color: #fff;
+    margin-top: 10px;
+    transition: 0.4s;
+}
+button.btn:hover {
+    color: #fff;
+    box-shadow: 0px 3px 7px 0px #252424;
+}
+input#email-2 {
+    width: 70%;
+}
+form label span{
+	color: red;
+}
+/*
+==========================================
+Mailing service css end
+==========================================
+*/
+
+
+
+/*
+========================================
+Footer css
+========================================
+*/
+footer#footer-section {
+    background: rgb(42,76,119);
+    color: #fff;
+    position: relative;
+    padding-top: 70px;
+}
+#footer-section img {
+    width: 100%;
+    position: absolute;
+    top: -2px;
+}
+.footer-section-item {
+    z-index: 1;
+    position: relative;
+}
+.footer-section-item ul {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 0;
+}
+.footer-section-item ul li{
+   	display: inline-flex;
+}
+.footer-section-item ul li a {
+    padding: 5px 10px;
+    display: inline;
+    color: #fff;
+}
+.footer-section-item .menu-section {
+    text-align: center;
+}
+.footer-section-item .menu-section ul {
+    margin-top: 0px;
+}
+.social {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.footer-section-item span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #ddd;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+.footer-section-item span:first-child:hover {
+    background: #3B5998;
+}
+.footer-section-item span:nth-child(2):hover {
+    background: #00ACEE;
+}
+.footer-section-item span:last-child:hover {
+    background: #0E76A8;
+}
+.footer-section-item span:hover i{
+	color: #fff;
+}
+.footer-section-item h6{
+	margin-bottom: 20px;
+}
+/*
+=============================================
+Footer css end
+=============================================
+*/
